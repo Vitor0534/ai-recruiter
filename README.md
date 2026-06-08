@@ -73,7 +73,8 @@ ai-recruiter/
    - **B – Buscar cursos**: fluxo análogo com a persona `curator` e a skill `course‑search.md`.
 
 5. **Itere**  
-   - Após cada operação o agente volta ao menu, permitindo novas consultas ou a atualização do quiz.
+   - Após cada operação o agente volta ao menu, permitindo novas consultas ou a atualização do quiz
+   - Caso queira verificar como os dados são armazenados ou, apenas testar de primeira, o projeto tem alguns dados mockados como exemplo no ./data
 
 ## Dados gerados
 
@@ -95,11 +96,3 @@ ai-recruiter/
 2. **Adicione** novas personas em `personas/` e suas skills correspondentes em `skills/`.  
 3. **Atualize** `AGENTS.md` com o novo agente e dependências.  
 4. **Teste** o fluxo completo usando a IA que executa o arquivo de persona principal.
-
-## Licença
-
-Este projeto é apenas um material de estudo; sinta‑se livre para adaptar, experimentar e compartilhar.
-
----
-
-*Este README foi gerado automaticamente a partir da documentação existente e complementado com informações relevantes dos arquivos do projeto.*
