@@ -19,7 +19,12 @@ Este documento lista e descreve os agentes disponíveis no projeto **ai-recruite
    - Localização: `personas/curator.md`
    - Skills necessárias: `skills/course-search.md` e `skills/firecrawl.md`.
 
-4. **coach** (simulação de entrevistas) – implementado.
+4. **buscador-artigo** (recomendação de artigos)
+   - Função: identificar assuntos que o usuário não domina nas vagas e recomendar artigos técnicos ou tutoriais de leitura.
+   - Localização: `personas/buscador-artigo.md`
+   - Skills necessárias: `skills/article-recommendation.md` e `skills/firecrawl.md`.
+
+5. **coach** (simulação de entrevistas) – implementado.
 
 5. **training‑coach** (orientação de estudos) – novo agente para criar planos de estudo e acompanhar progresso.
 
