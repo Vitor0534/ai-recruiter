@@ -20,15 +20,18 @@ ai-recruiter/
 │   ├─ personality-quiz.md   # Perguntas do quiz
 │   ├─ user-profile.md       # Respostas do usuário (gerado após o quiz)
 │   ├─ job-search-results.md # Últimos resultados do Scout
-│   └─ course-recommendations.md (gerado pelo Curator)
+│   ├─ course-recommendations.md (gerado pelo Curator)
+│   └─ artigos-recomendation.md (gerado pelo Buscador de Artigos)
 ├─ personas/
 │   ├─ master-recruiter.md   # Orquestrador – interface principal
 │   ├─ scout.md              # Busca de vagas (firecrawl)
-│   └─ curator.md            # Busca de cursos (firecrawl)
+│   ├─ curator.md            # Busca de cursos (firecrawl)
+│   └─ buscador-artigo.md    # Busca de artigos para temas faltantes
 ├─ skills/
 │   ├─ dispatch.md           # Lógica de envelope e chamada a sub‑agentes
 │   ├─ job-search.md         # Fluxo de busca de vagas
 │   ├─ course-search.md      # Fluxo de busca de cursos
+│   ├─ article-recommendation.md # Fluxo de busca de artigos
 │   └─ firecrawl.md          # Wrapper de comandos firecrawl
 └─ plano‑*.md                # Documentos de planejamento e requisitos
 ```
@@ -40,6 +43,7 @@ ai-recruiter/
 | **master‑recruiter** | Orquestrador. Interage com o usuário, coleta o quiz, exibe menu e despacha sub‑agentes. | `personas/master-recruiter.md` | `skills/dispatch.md`, `skills/job-search.md` |
 | **scout** | Busca vagas de emprego, analisa requisitos e gera resumo comparativo. | `personas/scout.md` | `skills/job-search.md`, `skills/firecrawl.md` |
 | **curator** | Busca cursos online para suprir habilidades faltantes. | `personas/curator.md` | `skills/course-search.md`, `skills/firecrawl.md` |
+| **buscador-artigo** | Busca artigos e conteúdos de leitura para habilidades e temas faltantes. | `personas/buscador-artigo.md` | `skills/article-recommendation.md`, `skills/firecrawl.md` |
 | **coach** | Simulação de entrevistas (a ser implementado). | – | – |
 | **training‑coach** | Cria planos de estudo personalizados e acompanha o progresso do usuário. | – | – |
 
@@ -63,6 +67,7 @@ ai-recruiter/
       a) Responder o quiz
       b) Buscar vagas (opção A) → despacha Scout
       c) Buscar cursos (opção B) → despacha Curator
+      d) Buscar artigos (opção D) → despacha Buscador-Artigo
       ```
 
 4. **Escolha a opção desejada**
@@ -81,6 +86,7 @@ ai-recruiter/
 - `data/user-profile.md` – Respostas do quiz (área de interesse, localização, nível, habilidades).
 - `data/job-search-results.md` – Últimos 5 resultados de vagas, incluindo correspondência de habilidades.
 - `data/course-recommendations.md` – Cursos sugeridos (gerado pelo Curator).
+- `data/artigos-recomendation.md` – Artigos e materiais de leitura recomendados (gerado pelo Buscador de Artigos).
 
 ## Extensões planejadas
 
