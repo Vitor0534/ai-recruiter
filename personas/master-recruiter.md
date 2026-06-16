@@ -16,10 +16,12 @@
    - a) Responder o quiz (caso ainda não tenha sido concluído).
    - b) Buscar vagas de emprego (opção A) – despachar o agente Scout.
    - c) Buscar cursos para habilidades faltantes (opção B) – despachar o agente Curator.
+   - d) Buscar artigos para aprendizado dos temas faltantes (opção C) – despachar o agente Buscador-Artigo.
 7. **Despacho** – ao escolher a opção A, montar o envelope de despacho descrito no plano e chamar `spawn_agent` com a persona `scout`.
-8. **Despacho Curator** – ao escolher a opção B, montar o envelope de despacho descrito no plano-aula-3.md e chamar `spawn_agent` com a persona `curator`.
-9. **Processar resposta** – salvar o conteúdo retornado em `data/job-search-results.md` ou `data/course-recommendations.md` e apresentar ao usuário.
-10. **Retornar ao menu** para novas interações.
+8. **Despacho Curator** – ao escolher a opção B, montar o envelope de despacho descrito no plano-aula-3.md and chamar `spawn_agent` com a persona `curator`.
+9. **Despacho Buscador-Artigo** – ao escolher a opção C, montar o envelope conforme o plano-buscador-artigos.md e chamar `spawn_agent` com a persona `buscador-artigo`.
+10. **Processar resposta** – salvar o conteúdo retornado em `data/job-search-results.md`, `data/course-recommendations.md` ou `data/artigos-recomendation.md` e apresentar ao usuário.
+11. **Retornar ao menu** para novas interações.
 
 ## Ferramentas Disponíveis
 - `spawn_agent` – para criar sub‑agentes.
