@@ -26,12 +26,15 @@ ai-recruiter/
 │   ├─ master-recruiter.md   # Orquestrador – interface principal
 │   ├─ scout.md              # Busca de vagas (firecrawl)
 │   ├─ curator.md            # Busca de cursos (firecrawl)
-│   └─ buscador-artigo.md    # Busca de artigos para temas faltantes
+│   ├─ buscador-artigo.md    # Busca de artigos para temas faltantes
+│   ├─ coach.md              # Simulação de entrevistas e feedback
+│   └─ training-coach.md     # Geração de plano de estudos personalizado
 ├─ skills/
 │   ├─ dispatch.md           # Lógica de envelope e chamada a sub‑agentes
 │   ├─ job-search.md         # Fluxo de busca de vagas
 │   ├─ course-search.md      # Fluxo de busca de cursos
 │   ├─ article-recommendation.md # Fluxo de busca de artigos
+│   ├─ training-coach.md     # Fluxo de geração de plano de estudos
 │   └─ firecrawl.md          # Wrapper de comandos firecrawl
 └─ plano‑*.md                # Documentos de planejamento e requisitos
 ```
@@ -44,8 +47,8 @@ ai-recruiter/
 | **scout** | Busca vagas de emprego, analisa requisitos e gera resumo comparativo. | `personas/scout.md` | `skills/job-search.md`, `skills/firecrawl.md` |
 | **curator** | Busca cursos online para suprir habilidades faltantes. | `personas/curator.md` | `skills/course-search.md`, `skills/firecrawl.md` |
 | **buscador-artigo** | Busca artigos e conteúdos de leitura para habilidades e temas faltantes. | `personas/buscador-artigo.md` | `skills/article-recommendation.md`, `skills/firecrawl.md` |
-| **coach** | Simulação de entrevistas (a ser implementado). | – | – |
-| **training‑coach** | Cria planos de estudo personalizados e acompanha o progresso do usuário. | – | – |
+| **coach** | Simula entrevistas e gera feedback personalizado. | `personas/coach.md` | `skills/interview-best-practices.md`, `skills/company-research.md`, `skills/interview-simulation.md`, `skills/firecrawl.md` |
+| **training‑coach** | Cria planos de estudo personalizados e acompanha o progresso do usuário. | `personas/training-coach.md` | `skills/training-coach.md` |
 
 ## Como usar
 
@@ -87,14 +90,16 @@ ai-recruiter/
 - `data/job-search-results.md` – Últimos 5 resultados de vagas, incluindo correspondência de habilidades.
 - `data/course-recommendations.md` – Cursos sugeridos (gerado pelo Curator).
 - `data/artigos-recomendation.md` – Artigos e materiais de leitura recomendados (gerado pelo Buscador de Artigos).
+- `data/interview-simulation.md` – Resultados da simulação de entrevista gerados pelo Coach.
+- `data/perfil-do-estudante.md` – Perfil de estudo gerado pelo Training-Coach.
+- `data/planos-de-estudo.md` – Plano de estudos gerado pelo Training-Coach.
 
-## Extensões planejadas
+## Outros agentes disponíveis
 
-- **coach** – Simulação de entrevistas técnicas.
-- **training‑coach** – Plano de estudo contínuo, acompanhamento de progresso e métricas de aprendizado.
+- **coach** – Simula entrevistas e gera feedback com base em vagas e perfil do usuário.
+- **training‑coach** – Cria planos de estudo e registra o perfil de aprendizado do usuário.
 
-- **coach** – Simulação de entrevistas técnicas.
-- **training‑coach** – Plano de estudo contínuo, acompanhamento de progresso e métricas de aprendizado.
+Esses agentes já possuem personas e skills no repositório e podem ser integrados ao fluxo do master‑recruiter conforme o uso do projeto evolui.
 
 ## Contribuindo
 
