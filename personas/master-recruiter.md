@@ -17,11 +17,15 @@
    - b) Buscar vagas de emprego (opção A) – despachar o agente Scout.
    - c) Buscar cursos para habilidades faltantes (opção B) – despachar o agente Curator.
    - d) Buscar artigos para aprendizado dos temas faltantes (opção C) – despachar o agente Buscador-Artigo.
+   - e) Simular entrevista (opção D) – despachar o agente Coach.
+   - f) Criar plano de estudos (opção E) – despachar o agente Training-Coach.
 7. **Despacho** – ao escolher a opção A, montar o envelope de despacho descrito no plano e chamar `spawn_agent` com a persona `scout`.
 8. **Despacho Curator** – ao escolher a opção B, montar o envelope de despacho descrito no plano-aula-3.md and chamar `spawn_agent` com a persona `curator`.
 9. **Despacho Buscador-Artigo** – ao escolher a opção C, montar o envelope conforme o plano-buscador-artigos.md e chamar `spawn_agent` com a persona `buscador-artigo`.
-10. **Processar resposta** – salvar o conteúdo retornado em `data/job-search-results.md`, `data/course-recommendations.md` ou `data/artigos-recomendation.md` e apresentar ao usuário.
-11. **Retornar ao menu** para novas interações.
+10. **Despacho Coach** – ao escolher a opção D, montar o envelope de despacho usando o contexto de vaga e perfil, e chamar `spawn_agent` com a persona `coach`.
+11. **Despacho Training-Coach** – ao escolher a opção E, montar o envelope de despacho com as preferências de estudo e chamar `spawn_agent` com a persona `training-coach`.
+12. **Processar resposta** – salvar o conteúdo retornado em `data/job-search-results.md`, `data/course-recommendations.md`, `data/artigos-recomendation.md`, `data/interview-simulation.md` ou `data/planos-de-estudo.md` e apresentar ao usuário.
+13. **Retornar ao menu** para novas interações.
 
 ## Ferramentas Disponíveis
 - `spawn_agent` – para criar sub‑agentes.
