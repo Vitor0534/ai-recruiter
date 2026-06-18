@@ -21,12 +21,14 @@ ai-recruiter/
 │   ├─ user-profile.md       # Respostas do usuário (gerado após o quiz)
 │   ├─ job-search-results.md # Últimos resultados do Scout
 │   ├─ course-recommendations.md (gerado pelo Curator)
-│   └─ artigos-recomendation.md (gerado pelo Buscador de Artigos)
+│   ├─ artigos-recomendation.md (gerado pelo Buscador de Artigos)
+│   └─ artigos-filtrados.md (gerado pelo Filtrador de Artigos)
 ├─ personas/
 │   ├─ master-recruiter.md   # Orquestrador – interface principal
 │   ├─ scout.md              # Busca de vagas (firecrawl)
 │   ├─ curator.md            # Busca de cursos (firecrawl)
 │   ├─ buscador-artigo.md    # Busca de artigos para temas faltantes
+│   ├─ filtrador-artigo.md   # Avaliação e resumo de artigos
 │   ├─ coach.md              # Simulação de entrevistas e feedback
 │   └─ training-coach.md     # Geração de plano de estudos personalizado
 ├─ skills/
@@ -34,6 +36,7 @@ ai-recruiter/
 │   ├─ job-search.md         # Fluxo de busca de vagas
 │   ├─ course-search.md      # Fluxo de busca de cursos
 │   ├─ article-recommendation.md # Fluxo de busca de artigos
+│   ├─ article-filter.md     # Fluxo de filtragem e resumo de artigos
 │   ├─ training-coach.md     # Fluxo de geração de plano de estudos
 │   └─ firecrawl.md          # Wrapper de comandos firecrawl
 └─ plano‑*.md                # Documentos de planejamento e requisitos
@@ -48,6 +51,7 @@ ai-recruiter/
 | **curator** | Busca cursos online para suprir habilidades faltantes. | `personas/curator.md` | `skills/course-search.md`, `skills/firecrawl.md` |
 | **buscador-artigo** | Busca artigos e conteúdos de leitura para habilidades e temas faltantes. | `personas/buscador-artigo.md` | `skills/article-recommendation.md`, `skills/firecrawl.md` |
 | **coach** | Simula entrevistas e gera feedback personalizado. | `personas/coach.md` | `skills/interview-best-practices.md`, `skills/company-research.md`, `skills/interview-simulation.md`, `skills/firecrawl.md` |
+| **filtrador-artigo** | Avalia artigos recomendados, verifica disponibilidade e gera resumos ou passo a passos. | `personas/filtrador-artigo.md` | `skills/article-filter.md`, `skills/firecrawl.md` |
 | **training‑coach** | Cria planos de estudo personalizados e acompanha o progresso do usuário. | `personas/training-coach.md` | `skills/training-coach.md` |
 
 ## Como usar
@@ -71,6 +75,7 @@ ai-recruiter/
       b) Buscar vagas (opção A) → despacha Scout
       c) Buscar cursos (opção B) → despacha Curator
       d) Buscar artigos (opção D) → despacha Buscador-Artigo
+      e) Filtrar artigos (opção F) → despacha Filtrador-Artigo
       ```
 
 4. **Escolha a opção desejada**
@@ -90,6 +95,7 @@ ai-recruiter/
 - `data/job-search-results.md` – Últimos 5 resultados de vagas, incluindo correspondência de habilidades.
 - `data/course-recommendations.md` – Cursos sugeridos (gerado pelo Curator).
 - `data/artigos-recomendation.md` – Artigos e materiais de leitura recomendados (gerado pelo Buscador de Artigos).
+- `data/artigos-filtrados.md` – Artigos filtrados com resumos ou passo a passos (gerado pelo Filtrador de Artigos).
 - `data/interview-simulation.md` – Resultados da simulação de entrevista gerados pelo Coach.
 - `data/perfil-do-estudante.md` – Perfil de estudo gerado pelo Training-Coach.
 - `data/planos-de-estudo.md` – Plano de estudos gerado pelo Training-Coach.
@@ -97,6 +103,7 @@ ai-recruiter/
 ## Outros agentes disponíveis
 
 - **coach** – Simula entrevistas e gera feedback com base em vagas e perfil do usuário.
+- **filtrador-artigo** – Avalia artigos recomendados, verifica disponibilidade e gera resumos ou passo a passos.
 - **training‑coach** – Cria planos de estudo e registra o perfil de aprendizado do usuário.
 
 Esses agentes já possuem personas e skills no repositório e podem ser integrados ao fluxo do master‑recruiter conforme o uso do projeto evolui.

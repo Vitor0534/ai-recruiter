@@ -26,7 +26,12 @@ Este documento lista e descreve os agentes disponíveis no projeto **ai-recruite
 
 5. **coach** (simulação de entrevistas) – implementado.
 
-5. **training‑coach** (orientação de estudos) – novo agente para criar planos de estudo e acompanhar progresso.
+6. **training‑coach** (orientação de estudos) – novo agente para criar planos de estudo e acompanhar progresso.
+
+7. **filtrador-artigo** (avaliação e resumo de artigos)
+   - Função: avaliar os artigos retornados pelo `buscador-artigo`, verificar disponibilidade dos links, apresentar ao usuário para seleção e gerar resumos rápidos ou passo a passos detalhados.
+   - Localização: `personas/filtrador-artigo.md`
+   - Skills necessárias: `skills/article-filter.md` e `skills/firecrawl.md`.
 
 ## Como adicionar novos agentes
 - Criar um arquivo de persona em `personas/` descrevendo papel, ferramentas e formato de resposta.
